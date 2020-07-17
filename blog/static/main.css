@@ -1,0 +1,290 @@
+body{
+    font-size: 20px;
+    color: #212529;
+    font-family: 'Microsoft JhengHei', 'Lora', 'Times New Roman', serif;
+}
+
+h2, h3{
+    font-weight: 800;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #212529;
+    transition: all 0.4s;
+}
+
+a:hover, a:focus {
+    color: #0085A1;
+}
+
+p {
+    font-size: 32px;
+    line-height: 2;
+    margin: 30px 0;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #0085A1;
+    text-shadow: none;
+}
+  
+::selection {
+    color: #fff;
+    background: #0085A1;
+    text-shadow: none;
+}
+
+#mainNav {
+    position: absolute;
+    border-bottom: 10px solid #e9ecef;
+    background-color: white;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-brand {
+    font-weight: 800;
+    color: #343a40;
+}
+
+#mainNav .navbar-toggler {
+    padding: 10px;
+    color: #343a40;
+}
+
+#mainNav .navbar-nav .nav-item.nav-link {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+/* 超過992就顯示此樣式 */
+@media only screen and (min-width: 992px) {
+    #mainNav {
+      border-bottom: 1px solid transparent;
+      background-color: transparent;
+    }
+    #mainNav .navbar-brand {
+      padding: 10px 20px;
+      color: #fff;
+    }
+    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    #mainNav .navbar-nav .nav-item.nav-link {
+      padding: 10px 20px;
+      color: #fff;
+    }
+    #mainNav .navbar-nav .nav-item.nav-link:focus, #mainNav .navbar-nav .nav-item.nav-link:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+header.function {
+    margin-bottom: 70px;
+    background: no-repeat center center;
+    background-color: #868e96;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+}
+
+header.masthead {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #868e96;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+}
+
+header.masthead .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: 0.5;
+}
+
+header.masthead .site-heading {
+  padding: 200px 150px;
+  color: white;
+}
+
+header.function .site-heading {
+    padding: 30px 150px;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  header.masthead .site-heading {
+    padding: 200px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+    header.function .site-heading {
+      padding: 30px 0;
+    }
+}
+
+header.masthead .site-heading {
+  text-align: center;
+}
+
+header.masthead .site-heading h2{
+  font-size: 50px;
+  margin-top: 50;
+}
+
+/* header.masthead .page-heading .subheading, */
+header.masthead .site-heading .subheading {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin: 10px 0 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header.masthead .site-heading .post-meta {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-primary {
+  background-color: #0085A1;
+  border-color: #0085A1;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #fff;
+  background-color: #00657b !important;
+  border-color: #00657b !important;
+}
+
+/* 註冊登入按鈕 */
+.btn.btn-outline-info{
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+/* contect.html */
+.floating-label-form-group {
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.floating-label-form-group .form-control {
+  font-size: 1.5em;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  resize: none;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none !important;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.form-group.floating-label-form-group .form-control-label{
+    font-size: 20px;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata button {
+  margin-top: 1px;
+  margin-right: -15px;
+  padding: 2px 3px;
+}
+
+/* page modal */
+.modal-footer .btn , .btn.page-btn{
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 0;
+}
+
+.media-body p{
+  margin: 0rem;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+  font-size: 16px;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+footer {
+  padding: 50px 65px;
+}
+
+/* 保證在每個瀏覽器都不偏移 */
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+}
+
+footer .copyright {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
