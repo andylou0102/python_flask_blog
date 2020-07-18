@@ -3,6 +3,7 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app
 from blog import db, login_manager
 from flask_login import UserMixin
+from sqlalchemy.dialects.mysql import LONGTEXT as LongText
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -37,7 +38,7 @@ class Post(db.Model):
     title = db.Column(db.Text, nullable=False)
     subtitle = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    content = db.Column(db.Text, nullable=False)
+    content = db.Column(db.LongText, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
