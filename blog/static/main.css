@@ -112,7 +112,7 @@ header.masthead .post-heading {
 @media only screen and (max-width: 600px) {
   header.masthead .site-heading,
   header.masthead .post-heading {
-    padding: 125px 150px 0;
+    padding: 125px 150px 0 0;
   }
 }
 
