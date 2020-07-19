@@ -254,12 +254,6 @@ header.masthead .site-heading .post-meta {
 }
 
 /* article */
-@media only secreen and (max-width: 600px) {
-    .post-img {
-      display: none;
-  }
-}
-
 .post-img,
 .article-img  {
   height: 65px;
