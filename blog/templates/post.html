@@ -17,7 +17,7 @@
 {% endblock header %}
 {% block content %}
 <article class="media">
-    <img class="rounded-circle article-img" src="{{ url_for('static', filename='img/' + post.author.image_file) }}">
+    <img class="rounded-circle post-img" title="account image" src="{{ url_for('static', filename='img/' + post.author.image_file) }}">
     <div class="media-body">
         <div class="article-metadata">
             {% if post.author == current_user %}
