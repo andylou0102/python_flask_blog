@@ -104,10 +104,20 @@ header.masthead .overlay {
   opacity: 0.5;
 }
 
-header.masthead .site-heading,
-header.masthead .post-heading {
-  padding: 200px 150px;
-  color: white;
+@media only screen and (max-width: 600px) {
+  header.masthead .site-heading,
+  header.masthead .post-heading {
+    padding: 100px 0;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  header.masthead .site-heading,
+  header.masthead .post-heading {
+    padding: 200px 150px;
+    color: white;
+  }
 }
 
 @media only screen and (min-width: 768px) {
