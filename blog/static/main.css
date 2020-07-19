@@ -125,7 +125,6 @@ header.masthead .site-heading {
   text-align: center;
 }
 
-/* <768 */
 header.masthead .site-heading h1{
   font-size: 50px;
 }
@@ -199,6 +198,10 @@ header.masthead .site-heading .post-meta {
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+.content-section .frame-control {
+  margin-top: 3rem;
 }
 
 /* contect.html */
@@ -277,7 +280,20 @@ a.article-title:hover {
 }
 
 .account-heading {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.media-body p.text-secondary {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .account-heading {
+    font-size: 2rem;
+  }
+  .media-body p.text-secondary {
+    font-size: 32px;
+  }
 }
 
 footer {
