@@ -6,6 +6,7 @@ from blog.users.forms import (RegistrationForm, LoginForm, AccountUpdateForm,
                             RequestResetForm, ResetPasswordForm, ContectForm)
 from flask_login import login_user, current_user, login_required, logout_user
 from blog.users.func import save_picture, send_reset_email
+from flask_mail import Message
 
 users = Blueprint('users', __name__)
 
@@ -109,11 +110,11 @@ def contect():
         phone_number = form.phone_number.data
         msg = form.message.data
 
-        message = Message('Hi! '+ name, sender='noreply@outlook.com', recipients=[email])
+        message = Message('Hi! '+ name, sender='noreply@gmail.com', recipients=[email])
         message.body = f'''{msg} 
             my phone number is(+886){phone_number}, you can direct contecting me by phone call.'''
         mail.send(message)
 
-        flash("傳送完成，收到會盡速回覆，謝謝!")
+        flash("傳送完成，收到會盡速回覆，謝謝!", "success")
         return redirect(url_for("users.contect"))
     return render_template("contect.html", form = form, title = "Contect")
