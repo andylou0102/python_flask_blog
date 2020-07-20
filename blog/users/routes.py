@@ -109,7 +109,7 @@ def contect():
         phone_number = form.phone_number.data
         msg = form.message.data
 
-        message = Message('Hi! '+ name, sender='noreply@gmail.com', recipients=[email])
+        message = Message('Hi! '+ name, sender='noreply@outlook.com', recipients=[email])
         message.body = f'''{msg} 
             my phone number is(+886){phone_number}, you can direct contecting me by phone call.'''
         mail.send(message)
