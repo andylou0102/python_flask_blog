@@ -6,7 +6,7 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
 from blog.config import Config
-
+# postgres://rdfqkxeeatotsh:e07faa6692ca8aebd58ffeb19b2bbc03df165cc7066f68aab3be883b1944bd2e@ec2-52-202-66-191.compute-1.amazonaws.com:5432/d1cdk0p64lp0oa
 db = SQLAlchemy()
 bcrypt = Bcrypt()
 login_manager = LoginManager()
