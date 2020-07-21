@@ -104,15 +104,16 @@ def user_posts(username):
 @users.route('/contect', methods = ['GET', 'POST'])
 def contect():
     form = ContectForm()
+    default_mail = 'frank87010217@gmail.com'
     if form.validate_on_submit():
         name = form.name.data
         email = form.email.data
         phone_number = form.phone_number.data
         msg = form.message.data
 
-        message = Message('Hi! '+ name, sender=[email], recipients='[frank87010217@gmail.com]')
+        message = Message('Hi! '+ name, sender='noreply@gmail.com', recipients=[default_mail])
         message.body = f'''{msg} 
-            my phone number is(+886){phone_number}, you can direct contecting me by phone call.'''
+            this is my phone {phone_number}, and email {email}.'''
         mail.send(message)
 
         flash("傳送完成，收到會盡速回覆，謝謝!", "success")
