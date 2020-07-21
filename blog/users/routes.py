@@ -111,7 +111,7 @@ def contect():
         phone_number = form.phone_number.data
         msg = form.message.data
 
-        message = Message('Hi! '+ name, sender='noreply@gmail.com', recipients=[default_mail])
+        message = Message('Hi! my name is '+ name, sender='noreply@gmail.com', recipients=[default_mail])
         message.body = f'''{msg} 
             this is my phone {phone_number}, and email {email}.'''
         mail.send(message)
