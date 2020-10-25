@@ -37,7 +37,7 @@ def update_post(post_id):
         post.title = form.title.data
         post.subtitle = form.subtitle.data
         post.content = form.content.data
-        post.update_posted = datetime.utcnow()
+        post.update_posted = datetime.now()
         db.session.commit()
         flash('貼文更新完成', 'success')
         return redirect(url_for('posts.post', post_id = post.id))
