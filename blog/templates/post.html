@@ -4,7 +4,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto">
+            <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="post-heading">
                     <h1>{{ post.title }}</h1>
                     <h3 class="subheading">{{ post.subtitle }}</h3>
@@ -20,6 +20,7 @@
     <img class="rounded-circle post-img" title="account image" src="{{ url_for('static', filename='img/' + post.author.image_file) }}">
     <div class="media-body">
         <div class="article-metadata">
+            <small class="text-muted">Last edited: {{ post.update_posted.strftime('%Y-%m-%d') }}</small>
             {% if post.author == current_user %}
                 <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#deleteModal">
                     <i class="fas fa-trash-alt"></i></button>
