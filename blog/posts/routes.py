@@ -5,6 +5,7 @@ from blog import db
 from blog.model import Post
 from flask_login import current_user, login_required
 from flask_mail import Message
+from datetime import datetime
 
 posts = Blueprint('posts', __name__)
 
