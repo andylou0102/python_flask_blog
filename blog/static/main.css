@@ -111,13 +111,13 @@ header.masthead {
 }
 
 .masthead .site-heading {
-  position: relative;
   text-align: center;
 }
 
 .masthead .site-heading,
 .masthead .post-heading {
-  padding: 200px 0;
+  position: relative;
+  padding: 200px 100px;
 }
 
 .masthead .site-heading h1{
@@ -145,7 +145,7 @@ header.masthead {
 @media screen and (max-width: 767px) {
   header.masthead .site-heading,
   header.masthead .post-heading {
-    padding: 250px 0 200px;
+    padding: 250px 50px 200px;
   }
   header.masthead .post-heading h1 {
     font-size: 2rem;
