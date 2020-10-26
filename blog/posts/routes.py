@@ -5,10 +5,9 @@ from blog import db
 from blog.model import Post
 from flask_login import current_user, login_required
 from flask_mail import Message
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 posts = Blueprint('posts', __name__)
-
 
 @posts.route('/post/new', methods = ['GET', 'POST'])
 @login_required
@@ -35,10 +34,14 @@ def update_post(post_id):
         abort(403)
     form = PostForm()
     if form.validate_on_submit():
+        dt = datetime.utcnow().replace(tzinfo=timezone.utc)
+        dt = dt.astimezone(timezone(timedelta(hours=8)))
+        dt = dt.replace(tzinfo=None)
+
         post.title = form.title.data
         post.subtitle = form.subtitle.data
         post.content = form.content.data
-        post.update_posted = datetime.now()
+        post.update_posted = dt
         db.session.commit()
         flash('貼文更新完成', 'success')
         return redirect(url_for('posts.post', post_id = post.id))

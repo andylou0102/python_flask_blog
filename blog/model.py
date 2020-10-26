@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app
 from blog import db, login_manager
@@ -32,12 +32,19 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"User('{self.username}', {self.email}', '{self.image_file}')"
 
+dt = datetime.utcnow().replace(tzinfo=timezone.utc)
+dt = dt.astimezone(timezone(timedelta(hours=8)))
+dt = dt.replace(tzinfo=None)
+
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.Text, nullable=False)
     subtitle = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    update_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    update_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow()
+                            .replace(tzinfo=timezone.utc).astimezone(timezone(timedelta(hours=8)))
+                            .replace(tzinfo=None))
+
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
