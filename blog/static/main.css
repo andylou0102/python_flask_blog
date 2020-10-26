@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     transition: all 0.4s;
+    color: black;
 }
 
 a:hover, a:focus {
@@ -44,7 +45,7 @@ p {
 /* navbar */
 #mainNav {
     position: absolute;
-    border-bottom: 10px solid #e9ecef;
+    border-bottom: 5px solid #e9ecef;
     background-color: white;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -65,7 +66,7 @@ p {
     letter-spacing: 1px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 991px) {
     #mainNav {
       border-bottom: 1px solid transparent;
       background-color: transparent;
@@ -88,9 +89,9 @@ p {
     }
 }
 
-/* header */
-header.masthead,
-header.funchead {
+/* header masthead */
+header.masthead {
+  color: white;
   margin-bottom: 50px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -99,7 +100,7 @@ header.funchead {
   background-size: cover;
 }
 
-header.masthead .overlay {
+.masthead .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,75 +110,55 @@ header.masthead .overlay {
   opacity: 0.5;
 }
 
-header.masthead .site-heading,
-header.masthead .post-heading {
-  color: white;
-}
-
-@media only screen and (max-width: 600px) {
-  header.masthead .site-heading,
-  header.masthead .post-heading {
-    padding: 140px 0 100px;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 768px) {
-  header.masthead .site-heading,
-  header.masthead .post-heading {
-    padding: 200px 150px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  header.masthead .site-heading,
-  header.masthead .post-heading {
-    padding: 200px 0;
-  }
-  header.funchead .site-heading {
-    padding: 30px 0;
-  }
-}
-
-header.masthead .site-heading {
+.masthead .site-heading {
+  position: relative;
   text-align: center;
 }
 
-header.masthead .site-heading h1{
-  font-size: 50px;
+.masthead .site-heading,
+.masthead .post-heading {
+  padding: 200px 0;
 }
 
-@media only screen and (min-width: 768px) {
-  header.masthead .site-heading h1 {
-    font-size: 80px;
-  }
+.masthead .site-heading h1{
+  font-size: 4rem;
 }
 
-header.masthead .post-heading h1 {
-  font-size: 35px;
+.masthead .post-heading h1 {
+  font-size: 3rem;
 }
 
-/* post subtitle */
-header.masthead .post-heading .subheading {
-  font-size: 24px;
+.post-heading .subheading {
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 10px 0 30px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* post date and author name */
-header.masthead .post-heading .post-meta {
+.post-heading .post-meta {
   font-size: 20px;
   font-weight: 300;
   font-style: italic;
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
+  header.masthead .site-heading,
+  header.masthead .post-heading {
+    padding: 250px 0 200px;
+  }
   header.masthead .post-heading h1 {
-    font-size: 55px;
+    font-size: 2rem;
   }
   header.masthead .post-heading .subheading {
-    font-size: 30px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header.masthead .site-heading,
+  header.masthead .post-heading {
+    padding: 200px 0 125px;
   }
 }
 
@@ -208,7 +189,8 @@ header.masthead .post-heading .post-meta {
   border-radius: 10px;
 }
 
-.modal-footer .btn , .btn.page-btn{
+.modal-footer .btn, 
+.btn.page-btn {
   font-size: 16px;
   padding: 4px 8px;
   border-radius: 0;
@@ -223,10 +205,10 @@ header.masthead .post-heading .post-meta {
 }
 
 .frame-control {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
-/* contect.html */
+/* contect */
 .floating-label-form-group {
     font-size: 14px;
     position: relative;
@@ -331,6 +313,7 @@ a.article-title:hover {
 /* footer */
 footer {
   padding: 50px 65px;
+  text-align: center;
 }
 
 /* 保證在每個瀏覽器都不偏移 */
@@ -339,9 +322,8 @@ footer .list-inline {
   padding: 0;
 }
 
-footer .copyright {
+footer p {
   font-size: 14px;
   margin-bottom: 0;
-  text-align: center;
 }
 

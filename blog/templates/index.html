@@ -57,57 +57,49 @@
     {% block header %}{% endblock header %}
 
     <main class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                            <div class="alert alert-{{ category }}">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
-                {% block content %}{% endblock content %}
-            </div>
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock content %}
         </div>
     </main>
 
     <hr>
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/profile.php?id=100002513920902">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.linkedin.com/in/%E7%8D%BB%E5%BC%98-%E7%BE%85-6996541a5/">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://github.com/andylou0102">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Andy Lou website &ndash; 2020</p>
-                </div>
-            </div>
-        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com/profile.php?id=100002513920902">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/%E7%8D%BB%E5%BC%98-%E7%BE%85-6996541a5/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://github.com/andylou0102">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <p class="text-muted">Copyright &copy; Andy Lou website &ndash; 2020</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
