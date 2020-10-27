@@ -68,6 +68,7 @@ p {
 
 .nav-background {
   display: none;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 991px) {
@@ -218,7 +219,7 @@ header.masthead {
 }
 
 .frame-control {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 /* contect */
