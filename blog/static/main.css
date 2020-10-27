@@ -66,6 +66,10 @@ p {
     letter-spacing: 1px;
 }
 
+.nav-background {
+  display: none;
+}
+
 @media only screen and (min-width: 991px) {
     #mainNav {
       border-bottom: 1px solid transparent;
@@ -86,6 +90,9 @@ p {
     #mainNav .navbar-nav .nav-item.nav-link:focus, 
     #mainNav .navbar-nav .nav-item.nav-link:hover {
       color: rgba(255, 255, 255, 0.8);
+    }
+    .nav-background {
+      display: block;
     }
 }
 
@@ -147,6 +154,9 @@ header.masthead {
   header.masthead .post-heading {
     padding: 250px 50px 200px;
   }
+  .masthead .site-heading h1 {
+    font-size: 3.5rem;
+  }
   header.masthead .post-heading h1 {
     font-size: 2rem;
   }
@@ -159,6 +169,9 @@ header.masthead {
   header.masthead .site-heading,
   header.masthead .post-heading {
     padding: 200px 0 125px;
+  }
+  .masthead .site-heading h1 {
+    font-size: 3rem;
   }
 }
 
